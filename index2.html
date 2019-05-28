@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+    <!-- 
+        la pagina donde sacamos el cdnjs 
+        https://cdnjs.com/libraries/systemjs
+    -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.21.0/system.js"></script>
+
+</head>
+<body>
+    
+    <!-- 
+        para llamar a todos los archivos js de una
+        misma carpeta
+    -->
+    <script>
+        SystemJS.config({
+            packages: {
+                "js": {//la carpeta js
+                    "main": "main",//el principal se llama main
+                    "defaultExtension": "js"
+                }
+            }
+        });
+    System.import("js");
+    </script>
+
+</body>
+</html>
